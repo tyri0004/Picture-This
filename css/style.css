@@ -33,6 +33,7 @@ h4 {
   font-weight: 300;
 }
 
+/* removed single img tag and added picture to ensure that the picture and img fill their grid area */
 picture, 
 picture img{
   width: 100%;
@@ -40,11 +41,16 @@ picture img{
   display: block;
 }
 
+/* added this to ensure that the image doesnt distort and crops instead */
 picture img{
   object-fit: cover;
 }
 @media (min-width: 960px) {
   .header {
     grid-template-columns: repeat(2, 1fr);
+
+    /* adds height so that it looks taller like the mockups */
+    min-height: 60vh;
   }
+
 }
