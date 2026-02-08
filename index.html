@@ -15,7 +15,10 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
+
+    <!-- picture element added to serve different images based on viewport size and device resolution -->
     <picture>
+      <!-- source for the square img added for screens 960px and larger,displayed at 50vw, multiple sizes are added to support 1x, 2x, and 3x -->
       <source 
       media="(min-width: 960px)"
       sizes="50vw"
@@ -27,9 +30,9 @@
       images/museum-1600x-square.jpg 1600w,
       images/museum-1920x-square.jpg 1920w,
       images/museum-2400x-square.jpg 2400w">
-
+      <!-- source for the landscape img added for screens smaller than 960px, displayed at 100vw, multiple sizes are added to support 1x, 2x, 3x, -->
       <source
-      media="(max-width: 960px)"
+      media="(max-width: 959px)"
       sizes="100vw"
       srcset="
       images/museum-320x-landscape.jpg 320w,
@@ -42,6 +45,7 @@
       images/museum-2160x-landscape.jpg 2160w,
       images/museum-2880x-landscape.jpg 2880w">
 
+      <!-- this is the fallback for older browsers that don't support the picture element -->
       <img src="images/museum-480x-landscape.jpg" alt="museum gallery with comfy seating">
 
     </picture>
